@@ -1,0 +1,14 @@
+{
+  "name": "cloudflare-worker-bot",
+  "version": "1.0.0",
+  "description": "Bot Telegram untuk deploy Cloudflare Worker otomatis (_worker.js Nautica)",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.3",
+    "node-telegram-bot-api": "^0.61.0"
+  }
+}
