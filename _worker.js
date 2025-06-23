@@ -1,7 +1,3 @@
-import { connect } from "cloudflare:sockets";
-// import { createHash, createDecipheriv } from "node:crypto";
-// import { Buffer } from "node:buffer";
-
 // Variables
 const rootDomain = "{{ROOT_DOMAIN}}"; // Ganti dengan domain utama kalian
 const serviceName = "{{SERVICE_NAME}}"; // Ganti dengan nama workers kalian
@@ -1676,3 +1672,6 @@ class Document {
     return this.html.replaceAll(/PLACEHOLDER_\w+/gim, "");
   }
 }
+addEventListener('fetch', event => {
+  event.respondWith(fetchHandler(event.request, event, event.target));
+});
